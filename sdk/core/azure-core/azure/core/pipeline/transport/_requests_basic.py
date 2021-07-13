@@ -295,5 +295,6 @@ class RequestsTransport(HttpTransport):
             error = ServiceRequestError(err, error=err)
 
         if error:
+            import pdb; pdb.set_trace()
             raise error
         return RequestsTransportResponse(request, response, self.connection_config.data_block_size)
